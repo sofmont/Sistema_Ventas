@@ -32,6 +32,7 @@ namespace Sistema_Ventas
         }
 
         
+        //prueba
         public void ActualizarCantidad()
         {
             producto.Cantidad -= cantidad;
