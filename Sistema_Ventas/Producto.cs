@@ -8,6 +8,54 @@ namespace Sistema_Ventas
 {
     internal class Producto
     {
+        private string nombre;
+        private decimal precio;
+        private int cantidad;
 
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+
+        public decimal Precio
+            { 
+            get { return precio; }
+            set { precio = value; } 
+        }
+
+        public int Cantidad
+        {
+            get { return cantidad; }
+            set { cantidad = value; }
+        }
+         
+        public Producto()
+        {
+            Nombre = "";
+            Precio = 0;
+            Cantidad = 0;
+        }
+
+        public Producto(string nombre, decimal precio, int cantidad)
+        {
+            this.Nombre = nombre;
+            this.Precio = precio;
+            this.Cantidad = cantidad;
+           
+        }
+        
+        public void AgregarProducto(int cantidadadañadida)
+        {
+            if (cantidadadañadida > 0)
+            {
+                Cantidad += cantidadadañadida;
+            }
+        }
+        public override string ToString()
+        {
+            return $"{Nombre} - Precio: {Precio:C} (Disponibles: {Cantidad})";
+        }
     }
+      
 }
